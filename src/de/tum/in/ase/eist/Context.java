@@ -12,6 +12,10 @@ public class Context {
         this.book = book;
     }
 
+    public Context(){
+
+    }
+
     public SearchStrategy getSearchAlgorithm() {
         return searchAlgorithm;
     }
