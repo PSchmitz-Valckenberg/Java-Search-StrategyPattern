@@ -24,7 +24,7 @@ public class Context {
         return book;
     }
 
-    public void setChapters(List<Chapter> chapters) {
+    public void setBook(List<Chapter> chapters) {
         this.book = chapters;
     }
 
