@@ -7,9 +7,7 @@ public class Context {
 
     private List<Chapter> book;
 
-    public Context(SearchStrategy searchAlgorithm, List<Chapter> book) {
-        this.searchAlgorithm = searchAlgorithm;
-        this.book = book;
+    public Context() {
     }
 
     public SearchStrategy getSearchAlgorithm() {
