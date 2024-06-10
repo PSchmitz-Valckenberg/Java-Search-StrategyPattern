@@ -4,11 +4,12 @@ import java.util.List;
 
 public class Context {
     private SearchStrategy searchAlgorithm;
-    private List<Chapter> chapters;
 
-    public Context(SearchStrategy searchAlgorithm, List<Chapter> chapters) {
+    private List<Chapter> book;
+
+    public Context(SearchStrategy searchAlgorithm, List<Chapter> book) {
         this.searchAlgorithm = searchAlgorithm;
-        this.chapters = chapters;
+        this.book = book;
     }
 
     public SearchStrategy getSearchAlgorithm() {
@@ -20,16 +21,16 @@ public class Context {
     }
 
     public List<Chapter> getChapters() {
-        return chapters;
+        return book;
     }
 
     public void setChapters(List<Chapter> chapters) {
-        this.chapters = chapters;
+        this.book = chapters;
     }
 
     public boolean isChaptersSortedByName() {
-        for (int i = 1; i < chapters.size(); i++) {
-            if (chapters.get(i - 1).getName().compareTo(chapters.get(i).getName()) > 0) {
+        for (int i = 1; i < book.size(); i++) {
+            if (book.get(i - 1).getName().compareTo(book.get(i).getName()) > 0) {
                 return false;
             }
         }
@@ -37,6 +38,6 @@ public class Context {
     }
 
     public int search(String chapterName) {
-        return searchAlgorithm.performSearch(chapters, chapterName);
+        return searchAlgorithm.performSearch(book, chapterName);
     }
 }
