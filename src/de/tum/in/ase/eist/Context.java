@@ -20,7 +20,7 @@ public class Context {
         this.searchAlgorithm = searchAlgorithm;
     }
 
-    public List<Chapter> getChapters() {
+    public List<Chapter> getBook() {
         return book;
     }
 
