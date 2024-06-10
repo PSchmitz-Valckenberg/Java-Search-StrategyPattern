@@ -12,7 +12,7 @@ public class Context {
         this.book = book;
     }
 
-    public Context(){
+    public Context() {
 
     }
 
